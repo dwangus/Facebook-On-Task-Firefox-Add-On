@@ -1,0 +1,10 @@
+body {
+	background-color: linen;
+	overflow: hidden;
+}
+
+.form-group {
+    width: 66%;
+    margin: 0px auto;
+    float: none;
+}

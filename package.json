@@ -1,0 +1,21 @@
+{
+  "title": "FB On-Task",
+  "name": "fb-on-task",
+  "version": "0.0.1",
+  "description": "Keeps you on task when you first visit facebook!",
+  "main": "index.js",
+  "author": "dwangus",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ],
+  "dependencies": {}, 
+  "permissions": {
+    "cross-domain-content": ["https://www.facebook.com/"],
+	"private-browsing": true
+  }
+}

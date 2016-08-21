@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="//fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<link href="css/custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<h2 id="intro" class="text-center page-header" style="color:white;text-shadow:-3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;"><b>What did you come here to do?</b></h2>
+	<div id="searchPrompt" style="display:none">
+		<div class="row text-center">
+			<div id="searchInputBox" class="form-group col-sm-1">
+				<input type="text" class="form-control" id="searchText" value="">
+			</div>
+		</div><br>
+		<div class="row text-center">
+			<form id="searchCategory">
+				<label class="radio-inline active"><input type="radio" name="query" value="people" checked=""><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Person</i></font></b></label>
+				<label class="radio-inline"><input type="radio" name="query" value="pages"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Page</i></font></b></label>
+				<label class="radio-inline"><input type="radio" name="query" value="groups"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Group</i></font></b></label> 
+				<label class="radio-inline"><input type="radio" name="query" value="top"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Etc.</i></font></b></label>
+			</form>
+		</div>
+		<br>
+		<div class="row text-center">
+			<button id="searchSubmit" type="button" class="btn btn-primary"><b>Search!</b></button>
+		</div>
+	</div>
+	<div id="chatPrompt" style="display:none">
+		<br>
+		<div class="row text-center">
+			<div id="chatInputBox" class="form-group col-sm-1">
+				<input type="text" class="form-control" id="chatText" value="">
+			</div>
+		</div><br>
+		<div class="row text-center">
+			<button id="chatSubmit" type="button" class="btn btn-success"><b>Let's see...</b></button>
+		</div>
+	</div>
+	<div id="initial">
+		<div class="row text-center">
+			<button id="search" type="button" class="btn btn-primary"><b>Search for someone/some page</b></button>
+		</div><br>
+		<div class="row text-center">
+			<button id="chat" type="button" class="btn btn-success"><b>Chat someone up</b></button>
+		</div><br>
+		<div class="row text-center">
+			<button id="birthday" type="button" class="btn btn-warning"><b>Trying to say happy birthday!</b></button>
+		</div><br>
+		<div class="row text-center">
+			<button id="chill" type="button" class="btn btn-danger"><b>Straight chillin' rn, brah</b></button>
+		</div>
+	</div>
+	<br><br>
+	<h6 class="text-center"><i>Press on the "Facebook On-Task" icon in the toolbar to deactivate this prompt</i></h6>
+</body>
+</html>
