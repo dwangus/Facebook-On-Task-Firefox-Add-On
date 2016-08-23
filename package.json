@@ -1,7 +1,7 @@
 {
   "title": "FB On-Task",
   "name": "fb-on-task",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Keeps you on task when you first visit facebook!",
   "main": "index.js",
   "author": "dwangus",

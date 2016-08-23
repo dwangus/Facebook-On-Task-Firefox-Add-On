@@ -3,7 +3,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="//fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	<link href="css/custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -18,7 +17,8 @@
 			<form id="searchCategory">
 				<label class="radio-inline active"><input type="radio" name="query" value="people" checked=""><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Person</i></font></b></label>
 				<label class="radio-inline"><input type="radio" name="query" value="pages"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Page</i></font></b></label>
-				<label class="radio-inline"><input type="radio" name="query" value="groups"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Group</i></font></b></label> 
+				<label class="radio-inline"><input type="radio" name="query" value="groups"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Group</i></font></b></label>
+				<label class="radio-inline"><input type="radio" name="query" value="events"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Event</i></font></b></label>
 				<label class="radio-inline"><input type="radio" name="query" value="top"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Etc.</i></font></b></label>
 			</form>
 		</div>
@@ -40,10 +40,13 @@
 	</div>
 	<div id="initial">
 		<div class="row text-center">
-			<button id="search" type="button" class="btn btn-primary"><b>Search for someone/some page</b></button>
+			<button id="search" type="button" class="btn btn-primary"><b>Search for someone/something</b></button>
 		</div><br>
 		<div class="row text-center">
 			<button id="chat" type="button" class="btn btn-success"><b>Chat someone up</b></button>
+		</div><br>
+		<div class="row text-center">
+			<button id="status" type="button" class="btn btn-info"><b>Post a dank new status</b></button>
 		</div><br>
 		<div class="row text-center">
 			<button id="birthday" type="button" class="btn btn-warning"><b>Trying to say happy birthday!</b></button>

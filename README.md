@@ -4,11 +4,13 @@ Keeps you on task when you first visit facebook!
 
 Options include:
 
-- Searching for a person/page/group, etc.
+- Searching for a person/page/group/event/etc.
 
 - Opening up a chatbox based on who you're looking for!
 
-- Opening up the birthdays dialog!
+- Using facebook's built-in feature and highlighting the "What's on your mind?" text-area!
+
+- Opening up the birthdays dialog! (if it's a friend's birthday)
 
 ##To Install
 

@@ -57,6 +57,12 @@ $(document).ready(function() {
 		self.port.emit("birthdayClose", "");
 	}
 	
+	var statusTrigger = $('#status').bind('click', statusHandler);
+	function statusHandler(e) {
+		e.preventDefault();
+		self.port.emit("statusClick", "");
+	}
+	
 	var chillTrigger = $('#chill').bind('click', chillHandler);
 	function chillHandler(e) {
 		e.preventDefault();
