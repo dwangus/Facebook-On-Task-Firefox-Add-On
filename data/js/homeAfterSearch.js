@@ -11,6 +11,8 @@ $(document).ready(function() {
 		self.port.emit("fbArrived", window.location.href);
 	});*/
 	$( "a:contains('Home')" ).click(function() {//This seems to be the catch-all case
-		self.port.emit("fbArrived", window.location.href);
+		$(document).ready(function() {
+			self.port.emit("fbArrived", window.location.href);
+		});
 	});
 });

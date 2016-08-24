@@ -5,8 +5,11 @@ $(document).ready(function() {
 		$("#initial").css("display", "initial");
 		$("#searchPrompt").css("display", "none");
 		$("#chatPrompt").css("display", "none");
+		$("#notificationsPrompt").css("display", "none");
 		$("#searchText").val("");
 		$("#chatText").val("");
+		$("#searchInputBox").removeClass("has-error has-success");
+		$("#chatInputBox").removeClass("has-error has-success");
 	});
 
 	var searchTrigger = $('#search').bind('click', searchHandler);
@@ -30,6 +33,20 @@ $(document).ready(function() {
 			$("#searchInputBox").addClass("has-error");
 		}
 	}
+	//This doesn't work
+	/*$('#searchSubmit').keypress(function (e) {
+		if (e.which == 13) {
+			searchBoxHandler(e);
+		}
+	});*/
+	document.getElementById('searchText').onkeypress = function(e){
+		if (!e) e = window.event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13'){
+			searchBoxHandler(e);
+			return false;
+		}
+	}
 	
 	var chatTrigger = $('#chat').bind('click', chatHandler);
 	function chatHandler(e) {
@@ -50,17 +67,40 @@ $(document).ready(function() {
 			$("#chatInputBox").addClass("has-error");
 		}
 	}
+	document.getElementById('chatText').onkeypress = function(e){
+		if (!e) e = window.event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13'){
+			chatBoxHandler(e);
+			return false;
+		}
+	}
 	
-	var bdayTrigger = $('#birthday').bind('click', birthdayHandler);
-	function birthdayHandler(e) {
+	var notifTrigger = $('#notifications').bind('click', notifHandler);
+	function notifHandler(e) {
 		e.preventDefault();
-		self.port.emit("birthdayClose", "");
+		$('#intro').html("<b>What are you trying to see?</b>");
+		$("#initial").css("display", "none");
+		$("#notificationsPrompt").css("display", "initial");
+		self.port.emit("notifResize", "");
+	}
+	var notifBox = $('#notificationsSubmit').bind('click', notifBoxHandler);
+	function notifBoxHandler(e) {
+		e.preventDefault();
+		var notifCategory = $('input[name=notifs]:checked', '#notificationsCategory').val();
+		self.port.emit("lookUpNotifs", notifCategory);
 	}
 	
 	var statusTrigger = $('#status').bind('click', statusHandler);
 	function statusHandler(e) {
 		e.preventDefault();
 		self.port.emit("statusClick", "");
+	}
+	
+	var bdayTrigger = $('#birthday').bind('click', birthdayHandler);
+	function birthdayHandler(e) {
+		e.preventDefault();
+		self.port.emit("birthdayClose", "");
 	}
 	
 	var chillTrigger = $('#chill').bind('click', chillHandler);

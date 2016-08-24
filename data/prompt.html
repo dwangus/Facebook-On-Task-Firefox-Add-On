@@ -1,8 +1,7 @@
 <html>
 <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="//fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
 	<link href="css/custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -27,6 +26,19 @@
 			<button id="searchSubmit" type="button" class="btn btn-primary"><b>Search!</b></button>
 		</div>
 	</div>
+	<div id="notificationsPrompt" style="display:none">
+		<div class="row text-center">
+			<form id="notificationsCategory">
+				<label class="radio-inline active"><input type="radio" name="notifs" value="notifications" checked=""><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Notifications</i></font></b></label>
+				<label class="radio-inline"><input type="radio" name="notifs" value="messages"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Messages</i></font></b></label>
+				<label class="radio-inline"><input type="radio" name="notifs" value="friends/requests"><b><font color=#3b5998 style="text-shadow:-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;"><i>Friend Requests</i></font></b></label>
+			</form>
+		</div>
+		<br>
+		<div class="row text-center">
+			<button id="notificationsSubmit" type="button" class="btn btn-danger"><b>Submit Choice</b></button>
+		</div>
+	</div>
 	<div id="chatPrompt" style="display:none">
 		<br>
 		<div class="row text-center">
@@ -46,16 +58,19 @@
 			<button id="chat" type="button" class="btn btn-success"><b>Chat someone up</b></button>
 		</div><br>
 		<div class="row text-center">
-			<button id="status" type="button" class="btn btn-info"><b>Post a dank new status</b></button>
+			<button id="birthday" type="button" class="btn btn-info"><b>Say happy birthday!</b></button>
 		</div><br>
 		<div class="row text-center">
-			<button id="birthday" type="button" class="btn btn-warning"><b>Trying to say happy birthday!</b></button>
+			<button id="status" type="button" class="btn btn-warning"><b>Post a dank new status</b></button>
 		</div><br>
 		<div class="row text-center">
-			<button id="chill" type="button" class="btn btn-danger"><b>Straight chillin' rn, brah</b></button>
+			<button id="notifications" type="button" class="btn btn-danger"><b>Look at my precious notifications</b></button>
+		</div><br><br><br>
+		<div class="row text-center">
+			<button id="chill" type="button" class="btn-default"><b>Straight chillin' rn, brah</b></button>
 		</div>
 	</div>
-	<br><br>
+	<br>
 	<h6 class="text-center"><i>Press on the "Facebook On-Task" icon in the toolbar to deactivate this prompt</i></h6>
 </body>
 </html>

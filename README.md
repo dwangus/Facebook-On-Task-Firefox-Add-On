@@ -10,7 +10,9 @@ Options include:
 
 - Using facebook's built-in feature and highlighting the "What's on your mind?" text-area!
 
-- Opening up the birthdays dialog! (if it's a friend's birthday)
+- Opening up the birthdays dialog! (if it is indeed a friend's birthday)
+
+- Look at your notifications, messages, or friend requests!
 
 ##To Install
 

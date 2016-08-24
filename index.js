@@ -8,7 +8,7 @@ var active = true;
 
 var panel = require("sdk/panel").Panel({
   width: 530,
-  height: 440,
+  height: 495,
   focus: true,
   position: {
 	top: 70  
@@ -33,7 +33,7 @@ function sending(worker) {
 	worker.port.on('fbArrived', function(url) {
 		if (active) {
 			panel.port.emit("reset", "");
-			panel.resize(530, 440);
+			panel.resize(530, 495);
 			panel.show();
 		} else {
 			panel.hide();
@@ -41,10 +41,13 @@ function sending(worker) {
 	});
 }
 panel.port.on("searchResize", function(done) {
-	panel.resize(510, 320);
+	panel.resize(510, 300);
 });
 panel.port.on("chatResize", function(done) {
-	panel.resize(510, 300);
+	panel.resize(510, 270);
+});
+panel.port.on("notifResize", function(done) {
+	panel.resize(510, 250);
 });
 
 panel.port.on("doSearch", function(query) {
@@ -60,6 +63,13 @@ panel.port.on("openChat", function(chatSearch) {
 		contentScriptFile: [data.url("jquery/jquery-3.1.0.js"), data.url("js/chat.js")]
 	});
 	chat.port.emit("findAndOpenChat", chatSearch);
+	panel.hide();
+});
+panel.port.on("lookUpNotifs", function(notifsURL) {
+	var notifs = tabs.activeTab.attach({
+		contentScriptFile: [data.url("jquery/jquery-3.1.0.js"), data.url("js/search.js")]
+	});
+	notifs.port.emit("changeURL", notifsURL);
 	panel.hide();
 });
 
