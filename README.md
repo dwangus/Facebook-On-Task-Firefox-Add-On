@@ -1,4 +1,4 @@
-#FB On-Task
+#Facebook On-Task (Firefox Add-On)
 
 Keeps you on task when you first visit facebook!
 
@@ -22,3 +22,5 @@ Or, you can simply, in the Firefox browser, press "Cmd + O" and select the fb-on
 
 
 Any questions or bugs or suggestions, please email me at dwangus@bu.edu -- or just message me on github!
+
+(If you're looking for a Chrome version -- see my 'Facebook-On-Task-Chrome-Extension' repository)
